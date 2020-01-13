@@ -1,0 +1,22 @@
+
+##数据源的配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/empdb
+    username: root
+    password: rootroot
+  ####增加对freeemarker 模板属性配置
+  freemarker:
+    template-loader-path: classpath:/templates
+    prefix:
+    suffix: .ftl
+
+##mybatis的配置
+mybatis:
+  ##加载引入dao接口的映射文件
+  mapper-locations: classpath:mapper/*.xml
+  ##给实体类起别名
+  type-aliases-package: com.pro.user.pojo
+server:
+  port: 8081
